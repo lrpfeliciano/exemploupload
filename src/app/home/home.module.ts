@@ -6,6 +6,7 @@ import { HomePage } from './home.page';
 
 import { HomePageRoutingModule } from './home-routing.module';
 
+import { FileSizeFormatPipe } from '../file-size-format.pipe';
 
 @NgModule({
   imports: [
@@ -14,6 +15,8 @@ import { HomePageRoutingModule } from './home-routing.module';
     IonicModule,
     HomePageRoutingModule
   ],
-  declarations: [HomePage]
+  declarations: [HomePage, FileSizeFormatPipe],
+  exports:    [ FileSizeFormatPipe ],
+  providers:    [ FileSizeFormatPipe ]
 })
 export class HomePageModule {}
